@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @parameter = params[:search].downcase
     @results = Garage.all.where("lower(name) LIKE :search", search: @parameter)
   end
+
 end
 
 #   def home
